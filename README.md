@@ -105,7 +105,5 @@ Altura mínima de um cartão: `320px`
 ## Git - Push
 ```powershell
 git remote add origin https://github.com/MarioSergioCavalcante/HZC-CSS.git
-
 git branch -M main
-
 git push -u origin main
