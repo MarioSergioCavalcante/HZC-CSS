@@ -3,93 +3,120 @@
     src: url(../font/icones.ttf);
 }
 
-body{
+body {
     background-color: #1D232A;
-    font-family: 'Open Sans','icones', sans-serif;
+    font-family: 'Open Sans', 'icones', sans-serif;
     color: white;
 }
 
-@media screen and (min-width: 1440px){
-    body{
-        display:grid;
+@media screen and (min-width: 1440px) {
+    body {
+        display: grid;
         grid-template-columns: auto 1fr;
 
     }
 }
 
+.cartao__imagem--desktop {
+    display: none;
+}
 
+.cartao__imagem--mobile {
+    display: block;
+}
 
-.cabecalho{
+.cabecalho {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:  #15191C;
+    background-color: #15191C;
     padding: 8px 16px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
 }
 
 
-.cabecalho__menu i::before{
+.cabecalho__menu i::before {
     content: "\e904";
     font-size: 24px;
 }
-.cabecalho__notificacao i::before{
+
+.cabecalho__notificacao i::before {
     content: "\e906";
     font-size: 24px;
 }
-.cabecalho__logo{
+
+.cabecalho__logo {
     width: 40px;
 }
-.cabecalho__perfil{
-    display:none;
+
+.cabecalho__perfil {
+    display: none;
 
 }
 
-@media screen and (min-width: 1440px){
- .cabecalho{
-    background-color:  #15191C;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    padding: 16px 60px;
-    height: 80px;
-    box-sizing: border-box;
-    column-gap: 32px;
-    grid-column: 2;
-    grid-row:1;
- }
- .cabecalho__menu{
-    display: none;
- }
- .cabecalho__logo{
-    display: none;
- }
- .cabecalho__perfil{
-    display:grid;
-    grid-template-columns: repeat(3,auto);
-    column-gap: 8px;
-    align-items: center;
-    justify-self: flex-end;
-    padding: 8px 32px;
-    border-right: 1px solid #95999C;
- }
- .cabecalho__perfil::before{
-    content: "";
-    display: block;
-    width: 32px;
-    height: 32px;
-    background-image: url("../img/profile_1.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
- }
- .cabecalho__perfil::after{
-    content: "\e90d";
-    font-size: 1.5rem;
-    color: #FFFFFF;
- }
+@media screen and (min-width: 1440px) {
+    .cabecalho {
+        background-color: #15191C;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        padding: 16px 60px;
+        height: 80px;
+        box-sizing: border-box;
+        column-gap: 32px;
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .cabecalho__menu {
+        display: none;
+    }
+
+    .cabecalho__logo {
+        display: none;
+    }
+
+    .cabecalho__perfil {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        column-gap: 8px;
+        align-items: center;
+        justify-self: flex-end;
+        padding: 8px 32px;
+        border-right: 1px solid #95999C;
+    }
+
+    .cabecalho__perfil::before {
+        content: "";
+        display: block;
+        width: 32px;
+        height: 32px;
+        background-image: url("../img/profile_1.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .cabecalho__perfil::after {
+        content: "\e90d";
+        font-size: 1.5rem;
+        color: #FFFFFF;
+    }
+
+    .cartao__imagem--desktop {
+        display: block;
+    }
+
+    .cartao__imagem--mobile {
+        display: none;
+    }
+
+    .cartao--destaque {
+        margin-bottom: 0;
+        padding: 16px 8px;
+    }
 }
 
-.menu-lateral{
+.menu-lateral {
     display: flex;
     flex-direction: column;
     background-color: #15191C;
@@ -99,33 +126,36 @@ body{
     left: -75vw;
     transition: .25s;
 }
-@media screen and (min-width:1440px){
-    .menu-lateral{
-        position:static;
+
+@media screen and (min-width:1440px) {
+    .menu-lateral {
+        position: static;
         width: 200px;
         grid-column: 1;
         grid-row: 1 / span 2;
     }
 }
-.menu-lateral--ativo{
-    left:0;   
+
+.menu-lateral--ativo {
+    left: 0;
     transition: .25s;
 }
-.menu-lateral__logo{
+
+.menu-lateral__logo {
     align-self: center;
     width: 118px;
     padding: 16px;
 }
 
-.menu-lateral__link{
+.menu-lateral__link {
     height: 64px;
-    color: #65999C; 
+    color: #65999C;
     padding-left: 64px;
     display: flex;
     align-items: center;
 }
 
-.menu-lateral__link::before{
+.menu-lateral__link::before {
     content: "\e900";
     width: 24px;
     height: 24px;
@@ -133,101 +163,153 @@ body{
     position: absolute;
     left: 24px;
 }
-.menu-lateral__link--ativo{
+
+.menu-lateral__link--ativo {
     color: white;
     padding-left: 56px;
     border-left: 8px solid #FFFFFF;
 }
-.menu-lateral__link--inicio::before{
+
+.menu-lateral__link--inicio::before {
     content: "\e902";
 }
 
-.menu-lateral__link--picos::before{
+.menu-lateral__link--picos::before {
     content: "\e909";
 }
 
-.menu-lateral__link--integrantes::before{
+.menu-lateral__link--integrantes::before {
     content: "\e903";
 }
-.menu-lateral__link--videos::before{
+
+.menu-lateral__link--videos::before {
     content: "\e90e";
 }
-.menu-lateral__link--camisas::before{
+
+.menu-lateral__link--camisas::before {
     content: "\e900";
 }
 
-.menu-lateral__link--pinturas::before{
+.menu-lateral__link--pinturas::before {
     content: "\e90a";
 }
-.principal{
+
+.principal {
     padding: 24px 16px;
-    display:grid;
+    display: grid;
     gap: 16px;
 
 }
-@media screen and (min-width: 1440px){
-    .principal{
+
+@media screen and (min-width: 1440px) {
+    .principal {
         display: grid;
         grid-template-columns: auto 1fr auto;
+        grid-template-areas:
+            "titulo-pagina titulo-pagina titulo-pagina"
+            "destaque-video destaque-video recentes-videos"
+            "secao-videos secao-videos secao-videos"
+            "recentes-artes destaque-produto destaque-produto"
+            "secao-produtos secao-produtos secao-produtos";
         column-gap: 32px;
         padding: 16px 60px;
         grid-column: 2;
+
     }
+
+    .titulo-pagina {
+        grid-area: titulo-pagina;
+    }
+
+    .destaque-video {
+        grid-area: destaque-video;
+    }
+
+    .recentes-videos {
+        grid-area: recentes-videos;
+    }
+
+    .secao-videos {
+        grid-area: secao-videos;
+    }
+
+    .recentes-artes {
+        grid-area: recentes-artes;
+    }
+
+    .destaque-produto {
+        grid-area: destaque-produto;
+    }
+
+    .secao-produtos {
+        grid-area: secao-produtos;
+    }
+
 }
-.titulo-pagina{
+
+.titulo-pagina {
     font-size: 1.5rem;
     font-weight: bold;
-    margin-top:10px;
+    margin-top: 10px;
     margin-left: 10px;
 }
-.cartao{
-    width:100%;
+
+.cartao {
+    width: 100%;
     border-radius: 15px;
     overflow: hidden;
     background-color: #2C343A;
 }
-.cartao--destaque{
+
+.cartao--destaque {
     margin-bottom: 16px;
 }
-.cartao__conteudo{
+
+.cartao__conteudo {
     padding: 16px;
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 8px;
 }
-.cartao__destaque{
+
+.cartao__destaque {
     grid-column: span 2;
 
 }
-.cartao__titulo{
+
+.cartao__titulo {
     font-size: 1.25rem;
     font-weight: bold;
     grid-column: span 2;
 }
-.cartao__perfil{
+
+.cartao__perfil {
     color: #95999C;
     font-size: 0.9rem;
     grid-column: span 2;
 }
-.cartao__info{
+
+.cartao__info {
     display: flex;
     align-items: center;
-    color: #95999C; 
+    color: #95999C;
 }
 
-.cartao__info--tempo::before{
+.cartao__info--tempo::before {
     content: "\e90c";
     margin-right: 8px;
 }
-.cartao__info--visualizacoes::before{
-     content: "\e90f";
+
+.cartao__info--visualizacoes::before {
+    content: "\e90f";
     margin-right: 8px;
 }
-.cartao__botao{
-    display:flex;
+
+.cartao__botao {
+    display: flex;
     justify-content: center;
     align-items: center;
-    background-color:#0480DC ;
+    background-color: #0480DC;
     width: 40px;
     height: 40px;
     border-radius: 10px;
@@ -235,47 +317,53 @@ body{
     justify-self: flex-end;
 }
 
-.cartao__botao--play::before{
+.cartao__botao--play::before {
     content: "\e90b";
-    font-size : 24px;
-    
+    font-size: 24px;
+
 }
 
-.cartao__botao--destaque{
+.cartao__botao--destaque {
     width: 100%;
     grid-column: span 2;
 
 }
-.cartao__botao--destaque::before{
+
+.cartao__botao--destaque::before {
     margin-right: 8px;
-    font-size : 24px;
+    font-size: 24px;
 }
-.secao{
+
+.secao {
     display: grid;
     gap: 16px;
 }
-.titulo__secao{
+
+.titulo__secao {
     font-size: 1.25rem;
     font-weight: bold;
 }
-.cartao_titulo--compra{
+
+.cartao_titulo--compra {
     font-size: 18px;
 }
-.cartao__botao--compra::before{
+
+.cartao__botao--compra::before {
     content: "\e901";
-    font-size : 24px;
+    font-size: 24px;
 }
-.cartao__info--compra::before{
+
+.cartao__info--compra::before {
     content: "\e905";
     font-size: 24px;
 }
 
-.cartao--recentes{
+.cartao--recentes {
     display: none;
 }
 
-@media screen and (min-width: 1440px){
-    .cartao--recentes{
+@media screen and (min-width: 1440px) {
+    .cartao--recentes {
         display: grid;
         grid-template-columns: repeat(2, auto);
         row-gap: 24px;
@@ -283,36 +371,50 @@ body{
         width: 256px;
         padding: 16px;
         box-sizing: border-box;
+        align-self: flex-start;
     }
-    .cartao--recentes .cartao__titulo{
+
+    .cartao--recentes .cartao__titulo {
         grid-column: auto;
     }
-    .cartao__link{
-       font-size: 0.8rem;
-       font-weight: 600;
-       color:#0480DC;
-       justify-self: flex-end;
+
+    .cartao__link {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #0480DC;
+        justify-self: flex-end;
     }
-    .cartao__lista{
+
+    .cartao__lista {
         display: grid;
-        row-gap:16px;
+        row-gap: 16px;
         grid-column: span 2;
     }
-    .cartao__item{
+
+    .cartao__item {
         display: grid;
         grid-template-columns: auto 1fr;
         gap: 8px;
     }
-    .cartao__item-thumb{
+
+    .cartao__item-thumb {
         width: 32px;
-       grid-row: span 2;
+        grid-row: span 2;
     }
-    .cartao__item-titulo{
+
+    .cartao__item-titulo {
         font-size: 0.9rem;
         font-weight: 600;
     }
-    .cartao__item-perfil{
+
+    .cartao__item-perfil {
         font-size: 0.8rem;
         color: #95999C;
+    }
+    .secao{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .titulo__secao{
+        grid-column: span 4;
     }
 }

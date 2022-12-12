@@ -32,8 +32,10 @@
 
     <main class="principal">
         <h2 class="titulo-pagina">Início</h2>
-        <article class="cartao cartao--destaque">
-            <img src="./assets/img/banner-mobile_1.png" alt="Banner do Cartao" class="cartao__imagem">
+        <article class="cartao cartao--destaque destaque-video">
+            <img src="./assets/img/banner-mobile_1.png" alt="Banner do Cartao" class="cartao__imagem cartao__imagem--mobile">
+            <img src="./assets/img/banner_1.png" alt="Banner do Cartao" class="cartao__imagem cartao__imagem--desktop">
+        
             <div class="cartao__conteudo">
                 <p class="cartao__destaque">Video em destaque</p>
                 <h3 class="cartao__titulo">HZC - Life is... /2021</h3>
@@ -43,7 +45,7 @@
                 <button class="cartao__botao cartao__botao--play cartao__botao--destaque">Assistir Agora</button>
             </div>
         </article>
-        <article class="cartao cartao--recentes">
+        <article class="cartao cartao--recentes recentes-videos">
             <h3 class="cartao__titulo">Videos Recentes</h3>
             <a href="#" class="cartao__link">Ver todos</a>
             <ul class="cartao__lista">
@@ -75,10 +77,8 @@
              
             </ul>
         </article>
-
-
-        <section class="secao">
-            <h3 class="titulo__secao">Vídeos mais visto</h3>
+        <section class="secao secao-videos">
+            <h3 class="titulo__secao">Vídeos mais vistos</h3>
             <article class="cartao">
                 <img src="./assets/img/video_1.png" alt="Video" class="cartao__imagem">
                 <div class="cartao__conteudo">
@@ -117,52 +117,51 @@
                 </div>
             </article>
         </section>
-        <section class="secao">
-          
-            <article class="cartao cartao--novas-artes">
-                <h3 class="cartao__titulo">Videos Recentes</h3>
-                <a href="#" class="cartao__link">Ver todos</a>
-                <ul class="cartao__lista">
-                    <li class="cartao__item">
-                        <img src="./assets/img/miniatura_1.png" alt="Thumbnail 1" class="cartao__item-thumb">
-                        <h class="cartao__item-titulo">HZC - Life is... /2021</h>
-                        <p class="cartao__item-perfil">Mário Sérgio</p>
-                    </li>
-                    <li class="cartao__item">
-                        <img src="./assets/img/miniatura_2.png" alt="Thumbnail 2" class="cartao__item-thumb">
-                        <h class="cartao__item-titulo">HZC - Life is... /2021</h>
-                        <p class="cartao__item-perfil">Mário Sérgio</p>
-                    </li>
-                    <li class="cartao__item">
-                        <img src="./assets/img/miniatura_3.png" alt="Thumbnail 3" class="cartao__item-thumb">
-                        <h class="cartao__item-titulo">HZC - Life is... /2021</h>
-                        <p class="cartao__item-perfil">Mário Sérgio</p>
-                    </li>
-                    <li class="cartao__item">
-                        <img src="./assets/img/miniatura_4.png" alt="Thumbnail 4" class="cartao__item-thumb">
-                        <h class="cartao__item-titulo">HZC - Life is... /2021</h>
-                        <p class="cartao__item-perfil">Mário Sérgio</p>
-                    </li>
-                    <li class="cartao__item">
-                        <img src="./assets/img/miniatura_5.png" alt="Thumbnail 5" class="cartao__item-thumb">
-                        <h class="cartao__item-titulo">HZC - Life is... /2021</h>
-                        <p class="cartao__item-perfil">Mário Sérgio</p>
-                    </li>
-                 
-                </ul>
-            </article>
-
-            <article class="cartao cartao--destaque">
-                <img src="./assets/img/banner-mobile_2.png" alt="Banner do Cartao" class="cartao__imagem">
-                <div class="cartao__conteudo">
-                    <p class="cartao__destaque">Nova arte</p>
-                    <h3 class="cartao__titulo cartao_titulo--compra">Only Zikas - Lagoa Dompa Club</h3>
-                    <p class="cartao__perfil">Bruno Lopes</p>
-                    <p class="cartao__info cartao__info--compra">33,33</p>
-                    <p class="cartao__info cartao__info--visualizacoes">1000 visualizações</p>
-                    <button class="cartao__botao cartao__botao--compra cartao__botao--destaque">Compre Agora</button>
-                </div>
-            </article>
+        <article class="cartao cartao--recentes recentes-artes">
+            <h3 class="cartao__titulo">Videos Recentes</h3>
+            <a href="#" class="cartao__link">Ver todos</a>
+            <ul class="cartao__lista">
+                <li class="cartao__item">
+                    <img src="./assets/img/miniatura_1.png" alt="Thumbnail 1" class="cartao__item-thumb">
+                    <h class="cartao__item-titulo">HZC - Life is... /2021</h>
+                    <p class="cartao__item-perfil">Mário Sérgio</p>
+                </li>
+                <li class="cartao__item">
+                    <img src="./assets/img/miniatura_2.png" alt="Thumbnail 2" class="cartao__item-thumb">
+                    <h class="cartao__item-titulo">HZC - Life is... /2021</h>
+                    <p class="cartao__item-perfil">Mário Sérgio</p>
+                </li>
+                <li class="cartao__item">
+                    <img src="./assets/img/miniatura_3.png" alt="Thumbnail 3" class="cartao__item-thumb">
+                    <h class="cartao__item-titulo">HZC - Life is... /2021</h>
+                    <p class="cartao__item-perfil">Mário Sérgio</p>
+                </li>
+                <li class="cartao__item">
+                    <img src="./assets/img/miniatura_4.png" alt="Thumbnail 4" class="cartao__item-thumb">
+                    <h class="cartao__item-titulo">HZC - Life is... /2021</h>
+                    <p class="cartao__item-perfil">Mário Sérgio</p>
+                </li>
+                <li class="cartao__item">
+                    <img src="./assets/img/miniatura_5.png" alt="Thumbnail 5" class="cartao__item-thumb">
+                    <h class="cartao__item-titulo">HZC - Life is... /2021</h>
+                    <p class="cartao__item-perfil">Mário Sérgio</p>
+                </li>
+             
+            </ul>
+        </article>
+        <article class="cartao cartao--destaque destaque-produto">
+            <img src="./assets/img/banner-mobile_2.png" alt="Banner do Cartao" class="cartao__imagem cartao__imagem--mobile">
+            <img src="./assets/img/banner_2.png" alt="Banner do Cartao" class="cartao__imagem cartao__imagem--desktop">
+            <div class="cartao__conteudo">
+                <p class="cartao__destaque">Nova arte</p>
+                <h3 class="cartao__titulo cartao_titulo--compra">Only Zikas - Lagoa Dompa Club</h3>
+                <p class="cartao__perfil">Bruno Lopes</p>
+                <p class="cartao__info cartao__info--compra">33,33</p>
+                <p class="cartao__info cartao__info--visualizacoes">1000 visualizações</p>
+                <button class="cartao__botao cartao__botao--compra cartao__botao--destaque">Compre Agora</button>
+            </div>
+        </article>
+        <section class="secao secao-produtos">
             <h3 class="titulo__secao">Camisa mais recentes:</h3>
             <article class="cartao">
                 <img src="./assets/img/produto_1.png" alt="Camisas Huflez 33" class="cartao__imagem">
